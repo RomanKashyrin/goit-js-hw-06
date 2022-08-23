@@ -1,10 +1,12 @@
 const input = document.querySelector('#name-input');
-const title = document.querySelector('#name-output');
+const span = document.querySelector('#name-output');
 
-input.addEventListener('input', newInp);
-function newInp(event) {
-  title.textContent = event.currentTarget.value;
-  if (event.currentTarget.value === ' ') {
-    title.textContent = 'Anonymous'
-    };
-};
+input.addEventListener('input', newInput);
+
+function newInput(a){
+    span.textContent = a.currentTarget.value;
+
+    if(a.currentTarget.value === ""){
+        span.textContent = "Anonymous";
+    }
+}
